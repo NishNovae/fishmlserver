@@ -16,3 +16,9 @@ $ uvicorn src.fishmlserver.main:app --reload
 ```bash
 $ uvicorn src.fishmlserver.main:app --host 0.0.0.0 --port 8949
 ```
+
+### Docker
+```bash
+$ sudo docker build -t fishmlserver:0.2.0 .
+$ sudo docker run -d --name fmlserv-020 -p 8877:8765 fishmlserver:0.2.0
+```
