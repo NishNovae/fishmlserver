@@ -32,7 +32,7 @@ def fish(length: float, weight: float):
     print(f"prediction: {fish_class}")
 
     return {
-        "prediction": prediction,
+        "prediction": fish_class,
         "length": length, 
         "weight": weight
     }
