@@ -2,6 +2,7 @@
 
 from typing import Union
 from fastapi import FastAPI
+import pickle
 
 app = FastAPI()
 
@@ -17,19 +18,17 @@ def read_item(item_id: int, q: Union[str, None] = None):
 def fish(length: float, weight: float):
     prediction = "dunno"
 
+    with open ("/home/nishtala/fishmlserver/note/model.pkl", "rb") as f:
+        fish_model = pickle.load(f)
 
+    prediction = fish_model.predict([[length, wegith]])
 
-
-
-#    if length > 30.0:
-#        prediction = "domi"
-#    else:
-#        prediction = "bingeoh"
+    fish_class = "빙어"
+    if predction[0] == 1:
+        fish_class = "도미"
 
     return {
         "prediction": prediction,
         "length": length, 
         "weight": weight
     }
-
-
