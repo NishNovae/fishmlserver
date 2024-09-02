@@ -22,3 +22,15 @@ $ uvicorn src.fishmlserver.main:app --host 0.0.0.0 --port 8949
 $ sudo docker build -t fishmlserver:0.2.0 .
 $ sudo docker run -d --name fmlserv-020 -p 8877:8765 fishmlserver:0.2.0
 ```
+
+```bash
+# execute bash command of docker; connect to CLI
+$ sudo docker exec -it <DOCKER_PS_NAME> bash
+
+# exit docker bash
+$ exit
+```
+
+### Fly.io
+
+

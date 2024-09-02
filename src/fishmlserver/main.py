@@ -17,10 +17,14 @@ def read_item(item_id: int, q: Union[str, None] = None):
 def fish(length: float, weight: float):
     prediction = "dunno"
 
-    if length > 30.0:
-        prediction = "domi"
-    else:
-        prediction = "bingeoh"
+
+
+
+
+#    if length > 30.0:
+#        prediction = "domi"
+#    else:
+#        prediction = "bingeoh"
 
     return {
         "prediction": prediction,

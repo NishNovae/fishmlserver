@@ -1,10 +1,11 @@
-FROM python:3.9
+FROM python:3.11.9-alpine3.20
 
 WORKDIR /code
 
-COPY . /code/
+#COPY . /code/
 
-#COPY ./requirements.txt /code/requirements.txt
+COPY src/fishmlserv/main.py /code/
+COPY requirements.txt /code/
 
 RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
 
