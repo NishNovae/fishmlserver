@@ -21,14 +21,18 @@ def fish(length: float, weight: float):
     with open ("/home/nishtala/fishmlserver/note/model.pkl", "rb") as f:
         fish_model = pickle.load(f)
 
-    prediction = fish_model.predict([[length, wegith]])
+    prediction = fish_model.predict([[length, weight]])
 
     fish_class = "빙어"
-    if predction[0] == 1:
+    if prediction[0] == 1:
         fish_class = "도미"
+
+    #debug
+    print(f"prediction: {fish_class}")
 
     return {
         "prediction": prediction,
         "length": length, 
         "weight": weight
     }
+
