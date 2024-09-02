@@ -12,4 +12,4 @@ def get_model_path():
     print(f"model_path: {model_path}")
 
 # debug
-get_model_path()
+#get_model_path()

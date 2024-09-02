@@ -3,6 +3,7 @@
 from typing import Union
 from fastapi import FastAPI
 import pickle
+from fishmlserver.model.manager import get_model_path
 
 app = FastAPI()
 
@@ -18,7 +19,7 @@ def read_item(item_id: int, q: Union[str, None] = None):
 def fish(length: float, weight: float):
     prediction = "dunno"
 
-    with open ("/home/nishtala/fishmlserver/note/model.pkl", "rb") as f:
+    with open(get_model_path()) as f:
         fish_model = pickle.load(f)
 
     prediction = fish_model.predict([[length, weight]])
