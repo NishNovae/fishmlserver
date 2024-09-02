@@ -4,7 +4,7 @@ WORKDIR /code
 
 #COPY . /code/
 
-COPY src/fishmlserv/main.py /code/
+COPY src/fishmlserver/main.py /code/
 COPY requirements.txt /code/
 
 RUN pip install git install git+https://github.com/NishNovae/fishmlserver.git/0.3.0/fish
