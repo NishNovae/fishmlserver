@@ -11,5 +11,6 @@ def get_model_path():
     print(f"dir_path: {dir_path}")
     print(f"model_path: {model_path}")
 
+    return model_path
 # debug
 #get_model_path()
