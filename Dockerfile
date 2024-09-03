@@ -5,7 +5,7 @@ WORKDIR /code
 
 #COPY . /code/
 
-COPY src/fishmlserver/main.py /code/main.py
+COPY src/fishmlserver/main.py /code
 #COPY requirements.txt /code/
 
 RUN pip install --no-cache-dir --upgrade git+https://github.com/dMario24/fishmlserv.git@0.8/DHub
