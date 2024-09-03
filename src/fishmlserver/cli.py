@@ -5,17 +5,8 @@ from fastapi import FastAPI
 import pickle
 from fishmlserver.model.manager import get_model_path
 
-app = FastAPI()
+import fire
 
-@app.get("/")
-def read_root():
-    return {"Hello": "world"}
-
-@app.get("/items/{item_id}")
-def read_item(item_id: int, q: Union[str, None] = None):
-    return {"item_id": item_id, "q": q}
-
-@app.get("/fish")
 def fish(length: float, weight: float):
     prediction = "dunno"
 
@@ -28,8 +19,7 @@ def fish(length: float, weight: float):
     if prediction[0] == 1:
         fish_class = "도미"
 
-    #debug
-    print(f"prediction: {fish_class}")
+    #print(f"prediction: {fish_class}")
 
     return {
         "prediction": fish_class,
@@ -37,3 +27,5 @@ def fish(length: float, weight: float):
         "weight": weight
     }
 
+if __name__ == "__main__":
+    fire.Fire(fish)
