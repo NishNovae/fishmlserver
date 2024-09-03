@@ -16,8 +16,8 @@ readme = "README.md"
 license = {text = "MIT"}
 
 [project.scripts]
-get-model-path = "fishmlserver.main:main" 
-prediction = "fishmlserver.cli:main"
+get-model-path = "fishmlserver.cli:model_path" 
+prediction = "fishmlserver.cli:run_fish"
 
 [tool.pdm]
 distribution = true

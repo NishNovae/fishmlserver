@@ -27,5 +27,8 @@ def fish(length: float, weight: float):
         "weight": weight
     }
 
-if __name__ == "__main__":
+def run_fish():
     fire.Fire(fish)
+
+def model_path():
+    fire.Fire(get_model_path())
