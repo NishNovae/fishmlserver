@@ -1,7 +1,7 @@
 [project]
 name = "fishmlserver"
-version = "0.4.0"
-description = "Unsuper"
+version = "0.6.0"
+description = "env; TESTER"
 authors = [
     {name = "NishNovae", email = "raecrowned@gmail.com"},
 ]
@@ -16,7 +16,7 @@ license = {text = "MIT"}
 
 
 [tool.pdm]
-distribution = false
+distribution = true
 
 [tool.pdm.dev-dependencies]
 note = [
