@@ -2,7 +2,6 @@
 import os
 
 def get_model_path():
-
     this_path = os.path.abspath(__file__)
     dir_path = os.path.dirname(this_path)
     model_path = dir_path + "/model.pkl" 

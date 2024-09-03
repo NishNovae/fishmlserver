@@ -37,3 +37,12 @@ def fish(length: float, weight: float):
         "weight": weight
     }
 
+app2 = typer.Typer()
+@app2.command()
+def get_path():
+    print("*"*30)
+    print(get_model_path())
+
+
+if __name__ == "__main__":
+    app2()
