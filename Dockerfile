@@ -8,6 +8,6 @@ WORKDIR /code
 COPY src/fishmlserver/main.py /code
 #COPY requirements.txt /code/
 
-RUN pip install --no-cache-dir --upgrade git+https://github.com/dMario24/fishmlserv.git@0.8/DHub
+RUN pip install --no-cache-dir --upgrade git+https://github.com/NishNovae/fishmlserver.git@0.5.0/manifest
 
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8080"]
