@@ -5,6 +5,8 @@ from fastapi import FastAPI
 import pickle
 from fishmlserver.model.manager import get_model_path
 
+import fire
+
 app = FastAPI()
 
 @app.get("/")
@@ -37,12 +39,8 @@ def fish(length: float, weight: float):
         "weight": weight
     }
 
-app2 = typer.Typer()
-@app2.command()
-def get_path():
-    print("*"*30)
-    print(get_model_path())
+def path(self):
+    return get_model_path()
 
-
-if __name__ == "__main__":
-    app2()
+if __name__ == '__main__':
+    fire.Fire(path)

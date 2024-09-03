@@ -6,9 +6,9 @@ def get_model_path():
     dir_path = os.path.dirname(this_path)
     model_path = dir_path + "/model.pkl" 
 
-    print(f"this_path: {this_path}")
-    print(f"dir_path: {dir_path}")
-    print(f"model_path: {model_path}")
+#    print(f"this_path: {this_path}")
+#    print(f"dir_path: {dir_path}")
+#    print(f"model_path: {model_path}")
 
     return model_path
 # debug
