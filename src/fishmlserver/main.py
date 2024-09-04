@@ -6,9 +6,8 @@ import pickle
 from fishmlserver.model.manager import get_model_path
 
 app = FastAPI()
-
 with open(get_model_path(), "rb") as f:
-    FISH_MODEL = pickle.load(f)
+    fish_model = pickle.load(f)
 
 @app.get("/")
 def read_root():
@@ -23,8 +22,6 @@ def fish(length: float, weight: float):
     prediction = "dunno"
 
     #with open(get_model_path(), "rb") as f:
-    fish_model = FISH_MODEL
-
     prediction = fish_model.predict([[length, weight]])
 
     fish_class = "빙어"
@@ -32,7 +29,7 @@ def fish(length: float, weight: float):
         fish_class = "도미"
 
     #debug
-    print(f"prediction: {fish_class}")
+    #print(f"prediction: {fish_class}")
 
     return {
         "prediction": fish_class,
