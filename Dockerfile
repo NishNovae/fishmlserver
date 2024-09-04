@@ -1,5 +1,6 @@
 #FROM python:3.11
-FROM datamario24/python311scikitlearn-fastapi:1.0.0
+#FROM datamario24/python311scikitlearn-fastapi:1.0.0
+FROM say7777/fishml:0.7.0
 
 WORKDIR /code
 
